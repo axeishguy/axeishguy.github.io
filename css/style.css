@@ -40,7 +40,7 @@
 /* Page container */
 body {
   font-family: Arial, sans-serif;
-  background: url('../assets/bg-pattern.png') repeat center;
+  background-color: #069;
   display: flex;
   justify-content: center;
   padding: 2rem;
@@ -60,7 +60,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: .5rem;
-  border: 3px solid rgba(255,255,255,0.8);
+  border: 2px solid rgba(255,255,255,1);
 }
 .profile h1 { font-size: 1.5rem; margin-bottom: 1rem; }
 
@@ -78,7 +78,7 @@ body {
   border-radius: .75rem;
   background: #111;
   grid-column: span 2;
-  border: 3px solid rgba(255,255,255,0.8);
+  border: 2px solid rgba(255,255,255,1);
 }
 
 /* Discord row (4th item) spans all 6 columns */
