@@ -6,15 +6,17 @@
   <title>{{ title }} — Art Prints</title>
   <link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body style="background: url('{{ bg_img }}') center/cover no-repeat;">
+<body style="background: url('{{ bg_img }}') repeat;">
   <div class="container">
     <div class="profile">
       <img src="{{ profile_img }}" alt="Profile">
       <h1>{{ title }}</h1>
     </div>
-    <div class="links-grid">
-      {% for link in links %}
-      <a href="{{ link.href }}" target="_blank" rel="noopener">
+
+    <!-- Row 1: Patreon / Shop / Prints -->
+    <div class="links-grid row-1">
+      {% for link in links[0:3] %}
+      <a href="{{ link.href }}" target="_blank">
         <div class="card">
           <img src="/static/assets/{{ link.img }}" alt="{{ link.label }}">
           <div class="label">{{ link.label }}</div>
@@ -22,6 +24,55 @@
       </a>
       {% endfor %}
     </div>
+
+    <!-- Row 2: Instagram / X / Bluesky -->
+    <div class="links-grid row-2">
+      {% for link in links[3:6] %}
+      <a href="{{ link.href }}" target="_blank">
+        <div class="card">
+          <img src="/static/assets/{{ link.img }}" alt="{{ link.label }}">
+          <div class="label">{{ link.label }}</div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <!-- Row 3: Discord (full width) -->
+    <div class="links-grid row-discord">
+      {% for link in links[6:7] %}
+      <a href="{{ link.href }}" target="_blank">
+        <div class="card">
+          <img src="/static/assets/{{ link.img }}" alt="{{ link.label }}">
+          <div class="label">{{ link.label }}</div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <!-- Row 4: Game / Kickstarter -->
+    <div class="links-grid row-3">
+      {% for link in links[7:9] %}
+      <a href="{{ link.href }}" target="_blank">
+        <div class="card">
+          <img src="/static/assets/{{ link.img }}" alt="{{ link.label }}">
+          <div class="label">{{ link.label }}</div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <!-- Row 5: Venmo / PayPal / Wishlist -->
+    <div class="links-grid row-4">
+      {% for link in links[9:12] %}
+      <a href="{{ link.href }}" target="_blank">
+        <div class="card">
+          <img src="/static/assets/{{ link.img }}" alt="{{ link.label }}">
+          <div class="label">{{ link.label }}</div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
   </div>
   <script src="/static/js/main.js"></script>
 </body>
