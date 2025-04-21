@@ -1,0 +1,99 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  min-height: 100vh;
+  /* Background pattern from /assets/bg-pattern.png */
+
+  /* Tile the pattern instead of covering */
+  background-image: url('/static/assets/bg-pattern.png');
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: auto;
+
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Profile section */
+.profile img {
+  /* Profile image from /assets/profile.jpg */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  border: 3px solid rgba(255,255,255,0.8);
+}
+.profile h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Links grid */
+.links-grid {
+
+  display: grid;
+/* 6 equal columns → normal items span 2 (2/6 = 1/3), special items span 3 (3/6 = 1/2) */
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+}
+
+.links-grid a {
+  display: block;           /* ensure grid‐item behavior */
+  grid-column: span 2;
+}
+.links-grid a:nth-child(7) {
+  /* Discord row: full width (3 original columns) */
+  grid-column: span 6;
+}
+
+.links-grid a:nth-child(8),
+.links-grid a:nth-child(9) {
+  grid-column: span 3;
+}
+/* Card styling */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #111;
+}
+.card img {
+  width: 100%;
+  height: 100px;          /* fixed height for all cards */
+  object-fit: cover;      /* crop to fill */
+  display: block;
+}
+
+/* Label overlay */
+.label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  padding: 0.25rem 0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Link reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
