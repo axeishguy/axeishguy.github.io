@@ -49,7 +49,7 @@ body {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 420px;
   width: 100%;
   text-align: center;
 }
@@ -60,9 +60,10 @@ body {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: .5rem;
+  margin-top: .5rem;
   border: 2px solid rgba(255,255,255,1);
 }
-.profile h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+.profile h1 { font-size: 1.5rem; margin-bottom: 1.85rem; margin-top: 0rem; }
 
 /* Grid: 6 columns of equal fraction */
 .links-grid {
@@ -82,25 +83,29 @@ body {
 }
 
 /* Discord row (4th item) spans all 6 columns */
-.links-grid .discord { grid-column: span 6; }
+/*.links-grid .discord { grid-column: span 6; }*/
 
 /* Game & Kickstarter (items 8 & 9) span 3 columns (1/2 width) */
-.links-grid .game,
+.links-grid .patreon,
+.links-grid .shop { grid-column: span 3; }
+
+/* Game & Kickstarter (items 8 & 9) span 3 columns (1/2 width) */
+.links-grid .discord,
 .links-grid .kickstarter { grid-column: span 3; }
 
 .links-grid .mailer { grid-column: span 6; }
 /* Images cropped uniformly */
 .card img {
-  width: 100%; height: 120px;
+  width: 100%; height: 130px;
   object-fit: cover;
   display: block;
 }
-
+.ig img, .x img, .bsky img { height :160px;}
 /* Label overlay */
 .label {
   position: absolute;
   bottom: 0; width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.9);
   padding: .5rem 0;
   font-size: 1rem;
   text-align: center;
@@ -111,6 +116,39 @@ a { text-decoration: none; color: inherit; }
 
 
 /* mailer */
+/* Newsletter section styling */
+.newsletter {
+  width: 100%;  /* Ensures it takes up the full width of the container */
+  display: flex;
+  justify-content: center;  /* Centers the card horizontally */
+  margin-top: 20px;  /* Adds space between the grid and the newsletter section */
+}
+
+.newsletter .card {
+  width: 100%;  /* Ensures the card inside the newsletter section is the same width */
+  max-width: 400px;  /* Optional: Set a max width for the newsletter card */
+}
+/* Style for the popup button */
+.popup-button {
+  background-color: #000000;
+  border: none;
+  border-radius: 25px;
+  box-shadow: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.popup-button:hover {
+  background-color: #555;
+}
 .mailer .label {
   font-size: 16px;
   font-weight: bold;
