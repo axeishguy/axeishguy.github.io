@@ -87,11 +87,11 @@ body {
 
 /* Game & Kickstarter (items 8 & 9) span 3 columns (1/2 width) */
 .links-grid .patreon,
-.links-grid .shop { grid-column: span 6; }
+.links-grid .etsy { grid-column: span 6; }
 
 /* Game & Kickstarter (items 8 & 9) span 3 columns (1/2 width) */
 .links-grid .discord,
-.links-grid .kickstarter, .links-grid .etsy, .links-grid .threadless  { grid-column: span 3; }
+.links-grid .kickstarter, .links-grid .shop, .links-grid .threadless  { grid-column: span 3; }
 
 .links-grid .mailer { grid-column: span 6; }
 /* Images cropped uniformly */
